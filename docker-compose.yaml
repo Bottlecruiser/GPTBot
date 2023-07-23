@@ -1,0 +1,15 @@
+version: '3'
+services:
+  LadyBot:
+    build:
+      context: .
+      dockerfile: dockerfile
+    volumes:
+      - '.:/opt/ChatGPT'
+    environment:
+      - aoi_key=${api_key}
+      - tg_token=${tg_token}
+    command: >
+      sh -c "python /opt/ChatGPT/main.py"
+    container_name: ChatGPT_Telegram_Bot
+    image: gpt_bot
