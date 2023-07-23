@@ -1,0 +1,2 @@
+tg_token = 'TELEGRAM_TOKEN'
+api_key = 'OPENAI_API_KEY'
